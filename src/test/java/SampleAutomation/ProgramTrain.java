@@ -191,12 +191,7 @@ public class ProgramTrain {
 		
 		System.out.println("-----------------------------------");
 		
-//All permutations of the String
-		String str1="ABC";
-		int r=str1.length()-1;
-		permute(str1,0,r);
-		
-		System.out.println("-----------------------------------");
+
 		
 //Check if String can form Palindrome
 		
@@ -268,7 +263,7 @@ public class ProgramTrain {
 		Arrays.sort(arr);
 		System.out.println(Arrays.binarySearch(arr, 4));
 		
-//Merge 2 List
+//Sort map for Key map can be converted to TreeMap
 		Map <Integer,String> l1=new LinkedHashMap<Integer,String>();
 		
 		l1.put(4,"Suja");
@@ -282,6 +277,7 @@ public class ProgramTrain {
 		
 		System.out.println(l2);
 		
+//Sort map based on value		
 		List <Entry <Integer,String>> l3=new ArrayList<Entry<Integer,String>>(l2.entrySet());
 		
 		Collections.sort(l3, new Comparator<Map.Entry<Integer,String>>(){
@@ -358,44 +354,13 @@ int[] fb=ArrayUtils.toPrimitive(sed.toArray(new Integer[sed.size()]));
 		System.out.print(i+" ");
 	}
 
-	
-	
+	//All permutations of the String
+			String str1="ABC";
+			int r=str1.length()-1;
+			permute(str1,0,r);
+			System.out.println("-----------------------------------");
 }	
-	
-	
 		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 public static void permute(String str,int l,int r) {
 	
 	if(l==r) {
@@ -407,14 +372,11 @@ public static void permute(String str,int l,int r) {
 			str=swap(str,l,i);
 			permute(str,l+1,r);
 			str=swap(str,l,i);
-			
-		}
-	}
+			}}
+	
 	
 }
-	
-	
-	
+		
 public static  String swap(String str,int i, int j) {
 	char temp;
 	char[] c=str.toCharArray();

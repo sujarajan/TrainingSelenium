@@ -70,13 +70,14 @@ public class Convertion {
   char c='w';
   String s =String.valueOf(c);
   
-//----------char to String-----------------//
+//---------- String to char-----------------//
   String g="thi";
-  
+  char[] cw=new char[g.length()];
   for (int i=0;i<g.length();i++) {
-	 char cw =g.charAt(i);
-	 System.out.print(cw);
+	  cw[i]=g.charAt(i);
+	
   }
+  System.out.print(Arrays.toString(cw));
   System.out.println();
   
 //----------char array to String-----------------//
